@@ -24,13 +24,12 @@ Nagios monitoriing tools from Jason Hancock
 
 rm -rf *
 
-wget -q -O nagios-memory.tar.gz https://github.com/jasonhancock/nagios-memory/archive/master.tar.gz
-mkdir nagios-memory
-tar --strip-components=1 -xvzf nagios-memory.tar.gz  -C nagios-memory
-
-wget -q -O nagios-cpu.tar.gz https://github.com/jasonhancock/nagios-cpu/archive/master.tar.gz
-mkdir nagios-cpu
-tar --strip-components=1 -xvzf nagios-cpu.tar.gz  -C nagios-cpu
+for p in nagios-memory nagios-cpu nagios-html-email nagios-puppet nagios-apache nagios-mysql nagios-redis
+do
+    wget -q -O $p.tar.gz https://github.com/jasonhancock/$p/archive/master.tar.gz
+    mkdir $p
+    tar --strip-components=1 -xvzf $p.tar.gz -C $p
+done
 
 %install
 rm -rf $RPM_BUILD_ROOT
