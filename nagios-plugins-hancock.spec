@@ -8,6 +8,11 @@ URL:            http://geek.jasonhancock.com
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 #BuildRequires: zlib-devel
 
+Requires: perl-JSON
+Requires: perl-LWP-Protocol-https
+Requires: perl-URI-Encode
+Requires: perl-libwww-perl
+
 %description
 Nagios monitoring tools from Jason Hancock
 
