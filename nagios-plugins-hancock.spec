@@ -24,7 +24,7 @@ Nagios monitoriing tools from Jason Hancock
 
 rm -rf *
 
-for p in nagios-memory nagios-cpu nagios-html-email nagios-puppet nagios-apache nagios-mysql nagios-redis nagios-iops
+for p in nagios-memory nagios-cpu nagios-html-email nagios-puppet nagios-apache nagios-mysql nagios-redis nagios-iops nagios-slack
 do
     wget -q -O $p.tar.gz https://github.com/jasonhancock/$p/archive/master.tar.gz
     mkdir $p
