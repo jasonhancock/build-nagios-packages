@@ -2,6 +2,7 @@ Packages the following projects into RPMs:
 
 * [nagios-apache](http://github.com/jasonhancock/nagios-apache)
 * [nagios-cpu](http://github.com/jasonhancock/nagios-cpu)
+* [nagios-elasticsearch](http://github.com/jasonhancock/nagios-elasticsearch)
 * [nagios-html-email](http://github.com/jasonhancock/nagios-html-email)
 * [nagios-memory](http://github.com/jasonhancock/nagios-memory)
 * [nagios-mysql](http://github.com/jasonhancock/nagios-mysql)
