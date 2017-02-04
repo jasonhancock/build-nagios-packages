@@ -1,0 +1,11 @@
+Package: nagios-plugins-hancock
+Version: 0.0.1
+Section: base
+Priority: optional
+Architecture: all
+Depends: libjson-perl,
+         liblwp-protocol-https-perl,
+         liburi-encode-perl,
+         libwww-perl
+Maintainer: Jason Hancock <jason@jasonhancock.com>
+Description: Nagios monitoriing tools from Jason Hancock

@@ -7,4 +7,4 @@ RUN yum -y update \
     wget \
     && yum clean all
 
-CMD cd /mnt/build && make package
+CMD cd /mnt/build && make rpm

@@ -13,22 +13,38 @@ container = builder-nagios-plugins-hancock
 
 topdir = /tmp/$(pkg)-$(version)
 
-all: container runcontainer
+all: containers runcontainers
 	true
 
-container:
-	docker build --no-cache -t $(container) .
+containers:
+	docker build --no-cache -t $(container)-deb debian/
+	docker build --no-cache -t $(container)-rpm redhat/
 
-runcontainer:
-	docker run -e "BUILD_NUMBER=$(BUILD_NUMBER)" -v $(WORKSPACE):/mnt/build $(container)
+runcontainers:
+	docker run -e "BUILD_NUMBER=$(BUILD_NUMBER)" -v $(WORKSPACE):/mnt/build $(container)-deb
+	docker run -e "BUILD_NUMBER=$(BUILD_NUMBER)" -v $(WORKSPACE):/mnt/build $(container)-rpm
 
-package: clean
+rpm: clean-rpm
 	@(mkdir $(topdir) && cd $(topdir) && mkdir SOURCES SRPMS BUILD RPMS SPECS tmp)
-	cp $(pkg).spec $(topdir)/SPECS/
+	cp redhat/$(pkg).spec $(topdir)/SPECS/
 	rpmbuild -bb --define "_topdir $(topdir)" --define "_tmppath $(topdir)/tmp" --define "version $(version)" $(topdir)/SPECS/$(pkg).spec
 	cp $(topdir)/*RPMS/*/*.*rpm .
 	rm -rf $(topdir)
 
-clean:
+deb: clean-deb
+	@sed -i "/^Version:/c\Version: $(version)" debian/$(pkg)/DEBIAN/control
+	@(cd debian && ./install.sh)
+	@(cd debian && find $(pkg) -name DEBIAN -prune -o -type f -exec md5sum {} \; > $(pkg)/DEBIAN/md5sums)
+	@dpkg-deb -b debian/$(pkg) $(pkg)-$(version).deb
+
+clean-rpm:
 	@rm -f *.rpm
 	@rm -rf $(topdir) || true
+
+clean-deb:
+	@rm -f *.deb
+
+clean:
+	@rm -f *.rpm
+	@rm -f *.deb
+	$(MAKE) -C debian clean
