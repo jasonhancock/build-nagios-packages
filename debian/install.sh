@@ -3,6 +3,12 @@
 PLUGIN_DIR=nagios-plugins-hancock/usr/lib/nagios/plugins
 mkdir -p $PLUGIN_DIR
 
+export GOPATH=/tmp/go
+go get github.com/pkg/errors
+go get github.com/jasonhancock/go-nagios
+go get github.com/jasonhancock/nagios-graphite/...
+install -m 0755 $GOPATH/bin/check_graphite $PLUGIN_DIR/
+
 for p in nagios-memory nagios-cpu nagios-html-email nagios-puppet nagios-apache nagios-mysql nagios-redis nagios-iops nagios-slack nagios-elasticsearch
 do
     wget -q -O $p.tar.gz https://github.com/jasonhancock/$p/archive/master.tar.gz

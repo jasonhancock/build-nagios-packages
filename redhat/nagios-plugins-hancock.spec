@@ -28,6 +28,10 @@ Nagios monitoriing tools from Jason Hancock
 %build
 
 rm -rf *
+export GOPATH=$RPM_BUILD_DIR/go
+go get github.com/pkg/errors
+go get github.com/jasonhancock/go-nagios
+go get github.com/jasonhancock/nagios-graphite/...
 
 for p in nagios-memory nagios-cpu nagios-html-email nagios-puppet nagios-apache nagios-mysql nagios-redis nagios-iops nagios-slack nagios-elasticsearch
 do
@@ -35,6 +39,7 @@ do
     mkdir $p
     tar --strip-components=1 -xvzf $p.tar.gz -C $p
 done
+
 
 %install
 rm -rf $RPM_BUILD_ROOT
@@ -50,6 +55,7 @@ mkdir -p $PNP_CHECK_DIR
 install -m 0755 */plugins/* $PLUGIN_DIR/
 install -m 0644 */pnp4nagios/templates/* $PNP_TEMPLATES_DIR/
 install -m 0644 */pnp4nagios/check_commands/* $PNP_CHECK_DIR/
+install -m 0755 $RPM_BUILD_DIR/go/bin/check_graphite $PLUGIN_DIR/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
