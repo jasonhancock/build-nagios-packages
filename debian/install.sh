@@ -9,8 +9,10 @@ go get github.com/pkg/errors
 go get github.com/jasonhancock/go-nagios
 go get github.com/jasonhancock/nagios-elk/...
 go get github.com/jasonhancock/nagios-graphite/...
+go get github.com/jasonhancock/nagios-healthz/...
 install -m 0755 $GOPATH/bin/check_elk_message $PLUGIN_DIR/
 install -m 0755 $GOPATH/bin/check_graphite $PLUGIN_DIR/
+install -m 0755 $GOPATH/bin/check_healthz $PLUGIN_DIR/
 
 for p in nagios-memory nagios-cpu nagios-html-email nagios-puppet nagios-apache nagios-mysql nagios-redis nagios-iops nagios-slack nagios-elasticsearch
 do
