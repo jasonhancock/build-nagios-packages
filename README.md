@@ -8,6 +8,7 @@ Packages the following projects into an RPM and a debian archive:
 * [nagios-html-email](http://github.com/jasonhancock/nagios-html-email)
 * [nagios-memory](http://github.com/jasonhancock/nagios-memory)
 * [nagios-mysql](http://github.com/jasonhancock/nagios-mysql)
+* [nagios-nomad](http://github.com/jasonhancock/nagios-nomad)
 * [nagios-puppet](http://github.com/jasonhancock/nagios-puppet)
 * [nagios-redis](http://github.com/jasonhancock/nagios-redis)
 
