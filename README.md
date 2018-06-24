@@ -3,6 +3,7 @@ Packages the following projects into an RPM and a debian archive:
 * [nagios-apache](http://github.com/jasonhancock/nagios-apache)
 * [nagios-cpu](http://github.com/jasonhancock/nagios-cpu)
 * [nagios-elasticsearch](http://github.com/jasonhancock/nagios-elasticsearch)
+* [nagios-goversion](http://github.com/jasonhancock/nagios-goversion)
 * [nagios-graphite](http://github.com/jasonhancock/nagios-graphite)
 * [nagios-healthz](http://github.com/jasonhancock/nagios-healthz)
 * [nagios-html-email](http://github.com/jasonhancock/nagios-html-email)
