@@ -5,7 +5,7 @@ RUN apt-get update && apt-get install -y make \
   git \
   wget
 
-ENV goversion 1.7.5
+ENV goversion 1.10.3
 ENV gofile go${goversion}.linux-amd64.tar.gz
 ENV gourl https://storage.googleapis.com/golang/${gofile}
 
