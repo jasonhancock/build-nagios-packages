@@ -6,6 +6,7 @@ mkdir -p $PLUGIN_DIR
 export GOPATH=/tmp/go
 go get gopkg.in/olivere/elastic.v3
 go get github.com/pkg/errors
+go get github.com/matryer/m
 go get github.com/jasonhancock/go-nagios
 go get github.com/jasonhancock/nagios-elk/...
 go get github.com/jasonhancock/nagios-goversion/...
