@@ -19,6 +19,7 @@ install -m 0755 $GOPATH/bin/check_graphite $PLUGIN_DIR/
 install -m 0755 $GOPATH/bin/check_healthz $PLUGIN_DIR/
 install -m 0755 $GOPATH/bin/check_healthz_compare $PLUGIN_DIR/
 install -m 0755 $GOPATH/bin/check_nomad_unplaceable_jobs $PLUGIN_DIR/
+install -m 0755 $GOPATH/bin/check_nomad_long_running $PLUGIN_DIR/
 
 for p in nagios-memory nagios-cpu nagios-html-email nagios-puppet nagios-apache nagios-mysql nagios-redis nagios-iops nagios-slack nagios-elasticsearch
 do
