@@ -67,6 +67,7 @@ install -m 0755 $RPM_BUILD_DIR/go/bin/check_graphite $PLUGIN_DIR/
 install -m 0755 $RPM_BUILD_DIR/go/bin/check_healthz $PLUGIN_DIR/
 install -m 0755 $RPM_BUILD_DIR/go/bin/check_healthz_compare $PLUGIN_DIR/
 install -m 0755 $RPM_BUILD_DIR/go/bin/check_nomad_unplaceable_jobs $PLUGIN_DIR/
+install -m 0755 $RPM_BUILD_DIR/go/bin/check_nomad_long_running $PLUGIN_DIR/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
