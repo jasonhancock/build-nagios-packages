@@ -7,6 +7,7 @@ Packages the following projects into an RPM and a debian archive:
 * [nagios-graphite](http://github.com/jasonhancock/nagios-graphite)
 * [nagios-healthz](http://github.com/jasonhancock/nagios-healthz)
 * [nagios-html-email](http://github.com/jasonhancock/nagios-html-email)
+* [nagios-http-redirect](http://github.com/jasonhancock/nagios-http-redirect)
 * [nagios-memory](http://github.com/jasonhancock/nagios-memory)
 * [nagios-mysql](http://github.com/jasonhancock/nagios-mysql)
 * [nagios-nomad](http://github.com/jasonhancock/nagios-nomad)
