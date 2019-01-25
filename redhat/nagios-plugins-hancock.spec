@@ -29,7 +29,7 @@ Nagios monitoriing tools from Jason Hancock
 
 rm -rf *
 export GOPATH=$RPM_BUILD_DIR/go
-go get gopkg.in/olivere/elastic.v3
+go get gopkg.in/olivere/elastic.v5
 go get github.com/pkg/errors
 go get github.com/matryer/m
 go get github.com/jasonhancock/go-nagios

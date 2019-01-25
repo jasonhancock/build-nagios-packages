@@ -4,7 +4,7 @@ PLUGIN_DIR=nagios-plugins-hancock/usr/lib/nagios/plugins
 mkdir -p $PLUGIN_DIR
 
 export GOPATH=/tmp/go
-go get gopkg.in/olivere/elastic.v3
+go get gopkg.in/olivere/elastic.v5
 go get github.com/pkg/errors
 go get github.com/matryer/m
 go get github.com/jasonhancock/go-nagios
