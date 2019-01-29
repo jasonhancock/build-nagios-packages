@@ -1,18 +1,19 @@
 Packages the following projects into an RPM and a debian archive:
 
-* [nagios-apache](http://github.com/jasonhancock/nagios-apache)
-* [nagios-cpu](http://github.com/jasonhancock/nagios-cpu)
-* [nagios-elasticsearch](http://github.com/jasonhancock/nagios-elasticsearch)
-* [nagios-goversion](http://github.com/jasonhancock/nagios-goversion)
-* [nagios-graphite](http://github.com/jasonhancock/nagios-graphite)
-* [nagios-healthz](http://github.com/jasonhancock/nagios-healthz)
-* [nagios-html-email](http://github.com/jasonhancock/nagios-html-email)
-* [nagios-http-redirect](http://github.com/jasonhancock/nagios-http-redirect)
-* [nagios-memory](http://github.com/jasonhancock/nagios-memory)
-* [nagios-mysql](http://github.com/jasonhancock/nagios-mysql)
-* [nagios-nomad](http://github.com/jasonhancock/nagios-nomad)
-* [nagios-puppet](http://github.com/jasonhancock/nagios-puppet)
-* [nagios-redis](http://github.com/jasonhancock/nagios-redis)
+* [nagios-apache](https://github.com/jasonhancock/nagios-apache)
+* [nagios-aws-config](https://github.com/jasonhancock/nagios-aws-config)
+* [nagios-cpu](https://github.com/jasonhancock/nagios-cpu)
+* [nagios-elasticsearch](https://github.com/jasonhancock/nagios-elasticsearch)
+* [nagios-goversion](https://github.com/jasonhancock/nagios-goversion)
+* [nagios-graphite](https://github.com/jasonhancock/nagios-graphite)
+* [nagios-healthz](https://github.com/jasonhancock/nagios-healthz)
+* [nagios-html-email](https://github.com/jasonhancock/nagios-html-email)
+* [nagios-http-redirect](https://github.com/jasonhancock/nagios-http-redirect)
+* [nagios-memory](https://github.com/jasonhancock/nagios-memory)
+* [nagios-mysql](https://github.com/jasonhancock/nagios-mysql)
+* [nagios-nomad](https://github.com/jasonhancock/nagios-nomad)
+* [nagios-puppet](https://github.com/jasonhancock/nagios-puppet)
+* [nagios-redis](https://github.com/jasonhancock/nagios-redis)
 
 To build the RPM, you need to have docker installed, then run:
 ```

@@ -30,9 +30,11 @@ Nagios monitoriing tools from Jason Hancock
 rm -rf *
 export GOPATH=$RPM_BUILD_DIR/go
 go get gopkg.in/olivere/elastic.v5
+go get github.com/aws/aws-sdk-go
 go get github.com/pkg/errors
 go get github.com/matryer/m
 go get github.com/jasonhancock/go-nagios
+go get github.com/jasonhancock/nagios-aws-config/...
 go get github.com/jasonhancock/nagios-elk/...
 go get github.com/jasonhancock/nagios-goversion/...
 go get github.com/jasonhancock/nagios-graphite/...
@@ -62,6 +64,7 @@ mkdir -p $PNP_CHECK_DIR
 install -m 0755 */plugins/* $PLUGIN_DIR/
 install -m 0644 */pnp4nagios/templates/* $PNP_TEMPLATES_DIR/
 install -m 0644 */pnp4nagios/check_commands/* $PNP_CHECK_DIR/
+install -m 0755 $RPM_BUILD_DIR/go/bin/check_aws_config_aggregator $PLUGIN_DIR/
 install -m 0755 $RPM_BUILD_DIR/go/bin/check_elk_message $PLUGIN_DIR/
 install -m 0755 $RPM_BUILD_DIR/go/bin/check_goversion $PLUGIN_DIR/
 install -m 0755 $RPM_BUILD_DIR/go/bin/check_graphite $PLUGIN_DIR/
