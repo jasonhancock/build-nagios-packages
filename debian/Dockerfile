@@ -1,11 +1,11 @@
 FROM ubuntu:16.04
+ARG goversion
 
 RUN apt-get update && apt-get install -y make \
   dpkg \
   git \
   wget
 
-ENV goversion 1.11.5
 ENV gofile go${goversion}.linux-amd64.tar.gz
 ENV gourl https://storage.googleapis.com/golang/${gofile}
 

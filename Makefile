@@ -1,5 +1,6 @@
 pkg = nagios-plugins-hancock
 version_base = 1.0
+goversion=1.11.9
 
 WORKSPACE = $(shell pwd)
 
@@ -17,8 +18,8 @@ all: containers runcontainers
 	true
 
 containers:
-	docker build --no-cache -t $(container)-deb debian/
-	docker build --no-cache -t $(container)-rpm redhat/
+	docker build --no-cache -t $(container)-deb --build-arg goversion=$(goversion) debian/
+	docker build --no-cache -t $(container)-rpm --build-arg goversion=$(goversion) redhat/
 
 runcontainers:
 	docker run -e "BUILD_NUMBER=$(BUILD_NUMBER)" -v $(WORKSPACE):/mnt/build $(container)-deb

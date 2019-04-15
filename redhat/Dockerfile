@@ -1,4 +1,5 @@
 FROM centos:7
+ARG goversion
 
 RUN yum -y update \
     && yum -y install \
@@ -8,7 +9,6 @@ RUN yum -y update \
     wget \
     && yum clean all
 
-ENV goversion 1.11.5
 ENV gofile go${goversion}.linux-amd64.tar.gz
 ENV gourl https://storage.googleapis.com/golang/${gofile}
 
